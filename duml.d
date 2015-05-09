@@ -146,6 +146,7 @@ void umlActivity( std.xml.Element containerElement ){
 	fileContent.put("</html>");
 
 	// save to file
+	try{ std.file.mkdir("output"); } catch( Exception ex ){}
 	std.file.write( "output/activity.html", fileContent.data );
 }
 
